@@ -1,0 +1,8 @@
+{
+    "resourceType": "Patient",
+    "active": true,
+    "birthDate": "2010-02-10",
+    "telecom": [
+        { "system": "email" }
+    ]
+}
