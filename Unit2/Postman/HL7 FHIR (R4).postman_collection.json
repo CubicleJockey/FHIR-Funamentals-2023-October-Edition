@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "a32f0382-0c04-4412-b367-22274eb37ed8",
+		"name": "HL7 FHIR (R4)",
+		"description": "1. **http://fhirserver.hl7fundamentals.org/fhir**",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "921117",
+		"_collection_link": "https://martian-resonance-195915.postman.co/workspace/Eleven-Labs~96c03296-fe72-4bd8-8b2b-4064ed3152f4/collection/921117-a32f0382-0c04-4412-b367-22274eb37ed8?action=share&source=collection_link&creator=921117"
+	},
+	"item": [
+		{
+			"name": "Create Patient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"resourceType\": \"Patient\",\r\n  \"name\": [\r\n    {\r\n      \"use\": \"official\",\r\n      \"family\": \"Davis\",\r\n      \"given\": [\r\n        \"Andre\"\r\n      ],      \r\n      \"text\": \"Andre Davis\"\r\n    }\r\n  ],\r\n  \"telecom\": [\r\n    {\r\n      \"system\": \"phone\",\r\n      \"use\": \"home\",\r\n      \"value\": \"(03) 5555 6789\"\r\n    }\r\n  ],\r\n  \"address\": [\r\n    {\r\n      \"line\": [\r\n        \"3300 Washtenaw\"\r\n      ],\r\n      \"city\": \"Ann Harbor\",\r\n      \"state\": \"MI\",\r\n      \"postalCode\": \"48104\",\r\n      \"country\": \"US\",\r\n      \"district\": \"Washtenaw\"\r\n    }\r\n  ],\r\n  \"gender\": \"male\",\r\n  \"birthDate\": \"1973-11-02\",\r\n  \"deceasedBoolean\": false,\r\n  \"language\": \"english\",\r\n  \"active\": true,\r\n  \"communication\": [\r\n    {\r\n      \"preferred\": true,\r\n      \"language\": {\r\n        \"text\": \"english\"\r\n      }\r\n    }\r\n  ],\r\n  \"identifier\": [\r\n    {\r\n      \"system\": \"https://clinfhir.com/fhir/NamingSystem/identifier\",\r\n      \"value\": \"andre.davis\"\r\n    }\r\n  ]\r\n}"
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/Patient",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"Patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Patient By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseUrl}}/Patient/3993/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"Patient",
+						"3993",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Patient By Id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"resourceType\": \"Patient\",\r\n    \"id\": \"3993\",\r\n    \"meta\": {\r\n        \"versionId\": \"1\",\r\n        \"lastUpdated\": \"2023-11-03T22:39:13.056+00:00\",\r\n        \"source\": \"#5Wz2mudnezwygT3f\"\r\n    },\r\n    \"language\": \"english\",\r\n    \"text\": {\r\n        \"status\": \"generated\",\r\n        \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><div class=\\\"hapiHeaderText\\\">Andre <b>DAVIS </b></div><table class=\\\"hapiPropertyTable\\\"><tbody><tr><td>Identifier</td><td>andre.davis</td></tr><tr><td>Address</td><td><span>3300 Washtenaw </span><br/><span>Ann Harbor </span><span>MI </span><span>US </span></td></tr><tr><td>Date of birth</td><td><span>02 November 1973</span></td></tr></tbody></table></div>\"\r\n    },\r\n    \"identifier\": [\r\n        {\r\n            \"system\": \"https://clinfhir.com/fhir/NamingSystem/identifier\",\r\n            \"value\": \"andre.davis\"\r\n        }\r\n    ],\r\n    \"active\": true,\r\n    \"name\": [\r\n        {\r\n            \"use\": \"official\",\r\n            \"text\": \"Andre Davis\",\r\n            \"family\": \"Davis\",\r\n            \"given\": [\r\n                \"Andre\"\r\n            ]\r\n        }\r\n    ],\r\n    \"telecom\": [\r\n        {\r\n            \"system\": \"phone\",\r\n            \"value\": \"(03) 5555 6789\",\r\n            \"use\": \"home\"\r\n        }\r\n    ],\r\n    \"gender\": \"male\",\r\n    \"birthDate\": \"1978-11-02\",\r\n    \"deceasedBoolean\": false,\r\n    \"address\": [\r\n        {\r\n            \"line\": [\r\n                \"3300 Washtenaw\"\r\n            ],\r\n            \"city\": \"Ann Harbor\",\r\n            \"district\": \"Washtenaw\",\r\n            \"state\": \"MI\",\r\n            \"postalCode\": \"48104\",\r\n            \"country\": \"US\"\r\n        }\r\n    ],\r\n    \"communication\": [\r\n        {\r\n            \"language\": {\r\n                \"text\": \"english\"\r\n            },\r\n            \"preferred\": true\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/Patient/3993",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"Patient",
+						"3993"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Patient By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/Patient/3993",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"Patient",
+						"3993"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patient History By Version",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseUrl}}/Patient/3993/_history/2",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"Patient",
+						"3993",
+						"_history",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
