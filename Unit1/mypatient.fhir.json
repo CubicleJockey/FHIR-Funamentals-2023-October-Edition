@@ -1,8 +1,49 @@
 {
     "resourceType": "Patient",
-    "active": true,
-    "birthDate": "2010-02-10",
+    "name": [
+      {
+        "use": "official",
+        "family": "Davis",
+        "given": [
+          "Andre"
+        ],
+        "text": "Andre Davis"
+      }
+    ],
     "telecom": [
-        { "system": "email" }
-    ]
+       { "system": "phone" },
+       { "use": "home" },
+       { "value": "(03) 5555 6789"}
+    ],
+    "address": [
+      { "line": [ "3300 Washtenaw" ] },
+      { "city": "Ann Harbor" },
+      { "state": "MI" },
+      { "postalCode": "48104" },
+      { "country": "US" },
+      { "district": "Washtenaw" }      
+    ],
+    "gender": "male",
+    "birthDate": "1973-11-02",
+    "deceasedBoolean": false,
+    "language": "english",
+    "active": true,
+    "communication": [
+      { 
+        "preferred": true,
+        "language": {
+          "text": "english"
+        } 
+      }
+    ],
+    "identifier": [
+      {
+        "system": "https://clinfhir.com/fhir/NamingSystem/identifier",
+        "value": "andre.davis"
+      }
+    ],
+    "text": {
+      "status": "generated",
+      "div": "<div xmlns='https://www.w3.org/1999/xhtml'>Wade Wilson</div>"
+    }
 }
