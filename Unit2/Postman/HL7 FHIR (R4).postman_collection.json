@@ -296,15 +296,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://fhirserver.hl7fundamentals.org/fhir/Patient?_id=4021",
-									"protocol": "http",
+									"raw": "{{BaseUrl}}/Patient?_id=4021",
 									"host": [
-										"fhirserver",
-										"hl7fundamentals",
-										"org"
+										"{{BaseUrl}}"
 									],
 									"path": [
-										"fhir",
 										"Patient"
 									],
 									"query": [
@@ -323,15 +319,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://fhirserver.hl7fundamentals.org/fhir/Patient?identifier=https://clinfhir.com/fhir/NamingSystem/identifier|andre.davis",
-									"protocol": "http",
+									"raw": "{{BaseUrl}}/Patient?identifier=https://clinfhir.com/fhir/NamingSystem/identifier|andre.davis",
 									"host": [
-										"fhirserver",
-										"hl7fundamentals",
-										"org"
+										"{{BaseUrl}}"
 									],
 									"path": [
-										"fhir",
 										"Patient"
 									],
 									"query": [
@@ -350,12 +342,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://fhirserver.hl7fundamentals.org/fhir/Patient?family=Davis&_sort=-_id",
-									"protocol": "http",
+									"raw": "{{BaseUrl}}/fhir/Patient?family=Davis&_sort=-_id",
 									"host": [
-										"fhirserver",
-										"hl7fundamentals",
-										"org"
+										"{{BaseUrl}}"
 									],
 									"path": [
 										"fhir",
@@ -381,15 +370,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://fhirserver.hl7fundamentals.org/fhir/Patient?given=andre&gender=male&birthdate=1978-11-02",
-									"protocol": "http",
+									"raw": "{{BaseUrl}}/Patient?given=andre&gender=male&birthdate=1978-11-02",
 									"host": [
-										"fhirserver",
-										"hl7fundamentals",
-										"org"
+										"{{BaseUrl}}"
 									],
 									"path": [
-										"fhir",
 										"Patient"
 									],
 									"query": [
@@ -416,15 +401,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://fhirserver.hl7fundamentals.org/fhir/Patient?address-city:contains=Awesome",
-									"protocol": "http",
+									"raw": "{{BaseUrl}}/Patient?address-city:contains=Awesome",
 									"host": [
-										"fhirserver",
-										"hl7fundamentals",
-										"org"
+										"{{BaseUrl}}"
 									],
 									"path": [
-										"fhir",
 										"Patient"
 									],
 									"query": [
