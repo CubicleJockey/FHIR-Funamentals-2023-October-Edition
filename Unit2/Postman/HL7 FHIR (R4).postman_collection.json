@@ -82,13 +82,13 @@
 									"raw": "{\r\n    \"resourceType\": \"Patient\",\r\n    \"id\": \"3993\",\r\n    \"meta\": {\r\n        \"versionId\": \"1\",\r\n        \"lastUpdated\": \"2023-11-03T22:39:13.056+00:00\",\r\n        \"source\": \"#5Wz2mudnezwygT3f\"\r\n    },\r\n    \"language\": \"english\",\r\n    \"text\": {\r\n        \"status\": \"generated\",\r\n        \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><div class=\\\"hapiHeaderText\\\">Andre <b>DAVIS </b></div><table class=\\\"hapiPropertyTable\\\"><tbody><tr><td>Identifier</td><td>andre.davis</td></tr><tr><td>Address</td><td><span>3300 Washtenaw </span><br/><span>Ann Harbor </span><span>MI </span><span>US </span></td></tr><tr><td>Date of birth</td><td><span>02 November 1973</span></td></tr></tbody></table></div>\"\r\n    },\r\n    \"identifier\": [\r\n        {\r\n            \"system\": \"https://clinfhir.com/fhir/NamingSystem/identifier\",\r\n            \"value\": \"andre.davis\"\r\n        }\r\n    ],\r\n    \"active\": true,\r\n    \"name\": [\r\n        {\r\n            \"use\": \"official\",\r\n            \"text\": \"Andre Davis\",\r\n            \"family\": \"Davis\",\r\n            \"given\": [\r\n                \"Andre\"\r\n            ]\r\n        }\r\n    ],\r\n    \"telecom\": [\r\n        {\r\n            \"system\": \"phone\",\r\n            \"value\": \"(03) 5555 6789\",\r\n            \"use\": \"home\"\r\n        }\r\n    ],\r\n    \"gender\": \"male\",\r\n    \"birthDate\": \"1978-11-02\",\r\n    \"deceasedBoolean\": false,\r\n    \"address\": [\r\n        {\r\n            \"line\": [\r\n                \"3300 Washtenaw\"\r\n            ],\r\n            \"city\": \"Ann Harbor\",\r\n            \"district\": \"Washtenaw\",\r\n            \"state\": \"MI\",\r\n            \"postalCode\": \"48104\",\r\n            \"country\": \"US\"\r\n        }\r\n    ],\r\n    \"communication\": [\r\n        {\r\n            \"language\": {\r\n                \"text\": \"english\"\r\n            },\r\n            \"preferred\": true\r\n        }\r\n    ]\r\n}"
 								},
 								"url": {
-									"raw": "{{BaseUrl}}/Patient/3993",
+									"raw": "{{BaseUrl}}/Patient/",
 									"host": [
 										"{{BaseUrl}}"
 									],
 									"path": [
 										"Patient",
-										"3993"
+										""
 									]
 								}
 							},
@@ -171,7 +171,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{BaseUrl}}/Observation/?_id=14",
+									"raw": "{{BaseUrl}}/Observation/?_id=4021",
 									"host": [
 										"{{BaseUrl}}"
 									],
@@ -182,7 +182,7 @@
 									"query": [
 										{
 											"key": "_id",
-											"value": "14"
+											"value": "4021"
 										}
 									]
 								}
@@ -279,6 +279,158 @@
 										{
 											"key": "code",
 											"value": "8302-2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Patient (Assignment)",
+					"item": [
+						{
+							"name": "Query Patient By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://fhirserver.hl7fundamentals.org/fhir/Patient?_id=4021",
+									"protocol": "http",
+									"host": [
+										"fhirserver",
+										"hl7fundamentals",
+										"org"
+									],
+									"path": [
+										"fhir",
+										"Patient"
+									],
+									"query": [
+										{
+											"key": "_id",
+											"value": "4021"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Query Patient By Identifier",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://fhirserver.hl7fundamentals.org/fhir/Patient?identifier=https://clinfhir.com/fhir/NamingSystem/identifier|andre.davis",
+									"protocol": "http",
+									"host": [
+										"fhirserver",
+										"hl7fundamentals",
+										"org"
+									],
+									"path": [
+										"fhir",
+										"Patient"
+									],
+									"query": [
+										{
+											"key": "identifier",
+											"value": "https://clinfhir.com/fhir/NamingSystem/identifier|andre.davis"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Query Patient By Family Name Desc Order By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://fhirserver.hl7fundamentals.org/fhir/Patient?family=Davis&_sort=-_id",
+									"protocol": "http",
+									"host": [
+										"fhirserver",
+										"hl7fundamentals",
+										"org"
+									],
+									"path": [
+										"fhir",
+										"Patient"
+									],
+									"query": [
+										{
+											"key": "family",
+											"value": "Davis"
+										},
+										{
+											"key": "_sort",
+											"value": "-_id"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Query Patient By Gender, Birthday, and Given Name",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://fhirserver.hl7fundamentals.org/fhir/Patient?given=andre&gender=male&birthdate=1978-11-02",
+									"protocol": "http",
+									"host": [
+										"fhirserver",
+										"hl7fundamentals",
+										"org"
+									],
+									"path": [
+										"fhir",
+										"Patient"
+									],
+									"query": [
+										{
+											"key": "given",
+											"value": "andre"
+										},
+										{
+											"key": "gender",
+											"value": "male"
+										},
+										{
+											"key": "birthdate",
+											"value": "1978-11-02"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Query Patient By City [Contains]",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://fhirserver.hl7fundamentals.org/fhir/Patient?address-city:contains=Awesome",
+									"protocol": "http",
+									"host": [
+										"fhirserver",
+										"hl7fundamentals",
+										"org"
+									],
+									"path": [
+										"fhir",
+										"Patient"
+									],
+									"query": [
+										{
+											"key": "address-city:contains",
+											"value": "Awesome"
 										}
 									]
 								}
