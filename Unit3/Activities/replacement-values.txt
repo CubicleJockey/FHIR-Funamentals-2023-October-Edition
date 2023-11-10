@@ -1,0 +1,10 @@
+[MEASURE_DATE]
+20231109T10:30:00Z
+20231109T10:45:00Z
+20231109T11:00:00Z
+
+
+[VALUE_SYSTOLIC_BP]         [VALUE_DIASTOLIC_BP]	[VALUE_HEART_RATE]	           [VALUE_RESP_RATE]
+134	                                 63	                    99	                         17
+137                             	119	                    69	                         14
+154	                                 63	                    79	                         16

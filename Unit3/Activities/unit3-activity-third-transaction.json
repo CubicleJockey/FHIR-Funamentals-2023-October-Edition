@@ -120,12 +120,12 @@
 				"resourceType": "Observation",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # andre.davis Respiratory Rate:[VALUE_RESP_RATE]/min on [MEASURE_DATE] </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # andre.davis Respiratory Rate:16/min on 20231109T11:00:00Z </div>"
 				},
 				"identifier": [
 					{
 						"system": "http://uwearme.com/measures",
-						"value": "andre.davis-[MEASURE_DATE]-9279-1"
+						"value": "andre.davis-20231109T11:00:00Z-9279-1"
 					}
 				],
 				"status": "final",
@@ -141,9 +141,9 @@
 				"subject": {
 					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
 				},
-				"effectiveDateTime": "[MEASURE_DATE]",
+				"effectiveDateTime": "20231109T11:00:00Z",
 				"valueQuantity": {
-					"value": [VALUE_RESP_RATE],
+					"value": 16,
 					"unit": "/min"
 				},
 				"device": {
@@ -161,12 +161,12 @@
 				"resourceType": "Observation",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # andre.davis Systolic Blood Pressure: [VALUE_SYSTOLIC_BP]mmHg on [MEASURE_DATE] </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # andre.davis Systolic Blood Pressure: 154mmHg on 20231109T11:00:00Z </div>"
 				},
 				"identifier": [
 					{
 						"system": "http://uwearme.com/measures",
-						"value": "andre.davis-[MEASURE_DATE]-8480-6"
+						"value": "andre.davis-20231109T11:00:00Z-8480-6"
 					}
 				],
 				"status": "final",
@@ -182,9 +182,9 @@
 				"subject": {
 					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
 				},
-				"effectiveDateTime": "[MEASURE_DATE]",
+				"effectiveDateTime": "20231109T11:00:00Z",
 				"valueQuantity": {
-                    "value": [VALUE_SYSTOLIC_BP],
+                    "value": 154,
 					"unit": "mmHg"
 				},
 				"device": {
@@ -202,12 +202,12 @@
 				"resourceType": "Observation",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # andre.davis Diastolic Blood Pressure:[VALUE_DIASTOLIC_BP]mmHg on [MEASURE_DATE] </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # andre.davis Diastolic Blood Pressure:63mmHg on 20231109T11:00:00Z </div>"
 				},
 				"identifier": [
 					{
 						"system": "http://uwearme.com/measures",
-						"value": "andre.davis-[MEASURE_DATE]-8462-4"
+						"value": "andre.davis-20231109T11:00:00Z-8462-4"
 					}
 				],
 				"status": "final",
@@ -223,9 +223,9 @@
 				"subject": {
 					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
 				},
-				"effectiveDateTime": "[MEASURE_DATE]",
+				"effectiveDateTime": "20231109T11:00:00Z",
 				"valueQuantity": {
-					"value": [VALUE_DIASTOLIC_BP],
+					"value": 63,
 					"unit": "mmHg"
 				},
 				"device": {
@@ -243,12 +243,12 @@
 				"resourceType": "Observation",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat #andre.davis Heart Rate:[VALUE_HEART_RATE]/min on [MEASURE_DATE] </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat #andre.davis Heart Rate:79/min on 20231109T11:00:00Z </div>"
 				},
 				"identifier": [
 					{
 						"system": "http://uwearme.com/measures",
-						"value": "andre.davis-[MEASURE_DATE]-8867-4"
+						"value": "andre.davis-20231109T11:00:00Z-8867-4"
 					}
 				],
 				"status": "final",
@@ -264,9 +264,9 @@
 				"subject": {
 					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
 				},
-				"effectiveDateTime": "[MEASURE_DATE]",
+				"effectiveDateTime": "20231109T11:00:00Z",
 				"valueQuantity": {
-					"value": [VALUE_HEART_RATE],
+					"value": 79,
 					"unit": "/min"
 				},
 				"device": {
