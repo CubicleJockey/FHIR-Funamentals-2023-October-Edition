@@ -120,12 +120,12 @@
 				"resourceType": "Observation",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # andre.davis Respiratory Rate:17/min on 20231109T10:30:00Z </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # andre.davis Respiratory Rate:17/min on 2023-11-09T10:30:00Z </div>"
 				},
 				"identifier": [
 					{
 						"system": "http://uwearme.com/measures",
-						"value": "andre.davis-20231109T10:30:00Z-9279-1"
+						"value": "andre.davis-2023-11-09T10:30:00Z-9279-1"
 					}
 				],
 				"status": "final",
@@ -141,7 +141,7 @@
 				"subject": {
 					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
 				},
-				"effectiveDateTime": "20231109T10:30:00Z",
+				"effectiveDateTime": "2023-11-09T10:30:00Z",
 				"valueQuantity": {
 					"value": 17,
 					"unit": "/min"
@@ -161,12 +161,12 @@
 				"resourceType": "Observation",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # andre.davis Systolic Blood Pressure: 134mmHg on 20231109T10:30:00Z </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # andre.davis Systolic Blood Pressure: 134mmHg on 2023-11-09T10:30:00Z </div>"
 				},
 				"identifier": [
 					{
 						"system": "http://uwearme.com/measures",
-						"value": "andre.davis-20231109T10:30:00Z-8480-6"
+						"value": "andre.davis-2023-11-09T10:30:00Z-8480-6"
 					}
 				],
 				"status": "final",
@@ -182,7 +182,7 @@
 				"subject": {
 					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
 				},
-				"effectiveDateTime": "20231109T10:30:00Z",
+				"effectiveDateTime": "2023-11-09T10:30:00Z",
 				"valueQuantity": {
                     "value": 134,
 					"unit": "mmHg"
@@ -202,12 +202,12 @@
 				"resourceType": "Observation",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # andre.davis Diastolic Blood Pressure:63mmHg on 20231109T10:30:00Z </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # andre.davis Diastolic Blood Pressure:63mmHg on 2023-11-09T10:30:00Z </div>"
 				},
 				"identifier": [
 					{
 						"system": "http://uwearme.com/measures",
-						"value": "andre.davis-20231109T10:30:00Z-8462-4"
+						"value": "andre.davis-2023-11-09T10:30:00Z-8462-4"
 					}
 				],
 				"status": "final",
@@ -223,7 +223,7 @@
 				"subject": {
 					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
 				},
-				"effectiveDateTime": "20231109T10:30:00Z",
+				"effectiveDateTime": "2023-11-09T10:30:00Z",
 				"valueQuantity": {
 					"value": 63,
 					"unit": "mmHg"
@@ -243,12 +243,12 @@
 				"resourceType": "Observation",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat #andre.davis Heart Rate:99/min on 20231109T10:30:00Z </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat #andre.davis Heart Rate:99/min on 2023-11-09T10:30:00Z </div>"
 				},
 				"identifier": [
 					{
 						"system": "http://uwearme.com/measures",
-						"value": "andre.davis-20231109T10:30:00Z-8867-4"
+						"value": "andre.davis-2023-11-09T10:30:00Z-8867-4"
 					}
 				],
 				"status": "final",
@@ -264,7 +264,7 @@
 				"subject": {
 					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
 				},
-				"effectiveDateTime": "20231109T10:30:00Z",
+				"effectiveDateTime": "2023-11-09T10:30:00Z",
 				"valueQuantity": {
 					"value": 99,
 					"unit": "/min"

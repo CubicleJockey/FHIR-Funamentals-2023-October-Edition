@@ -1,0 +1,66 @@
+{
+    "resourceType": "Bundle",
+    "id": "92e3c35e-88ae-4334-b9b7-ac97942b4508",
+    "type": "transaction-response",
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://fhirserver.hl7fundamentals.org/fhir"
+        }
+    ],
+    "entry": [
+        {
+            "response": {
+                "status": "200 OK",
+                "location": "Organization/4282/_history/11",
+                "etag": "11"
+            }
+        },
+        {
+            "response": {
+                "status": "200 OK",
+                "location": "Patient/4906/_history/1",
+                "etag": "1"
+            }
+        },
+        {
+            "response": {
+                "status": "200 OK",
+                "location": "Device/4907/_history/1",
+                "etag": "1"
+            }
+        },
+        {
+            "response": {
+                "status": "201 Created",
+                "location": "Observation/4909/_history/1",
+                "etag": "1",
+                "lastModified": "2023-11-10T21:50:21.448+00:00"
+            }
+        },
+        {
+            "response": {
+                "status": "201 Created",
+                "location": "Observation/4910/_history/1",
+                "etag": "1",
+                "lastModified": "2023-11-10T21:50:21.448+00:00"
+            }
+        },
+        {
+            "response": {
+                "status": "201 Created",
+                "location": "Observation/4911/_history/1",
+                "etag": "1",
+                "lastModified": "2023-11-10T21:50:21.448+00:00"
+            }
+        },
+        {
+            "response": {
+                "status": "201 Created",
+                "location": "Observation/4912/_history/1",
+                "etag": "1",
+                "lastModified": "2023-11-10T21:50:21.448+00:00"
+            }
+        }
+    ]
+}
