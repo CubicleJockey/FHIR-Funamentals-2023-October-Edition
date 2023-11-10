@@ -8,7 +8,7 @@
 				"resourceType": "Organization",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UWEARME - A DIVISION OF HEALTH GIZMOS                        CORP </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UWEARME - A DIVISION OF HEALTH GIZMOS CORP </div>"
 				},
 				"identifier": [
 					{
@@ -82,7 +82,7 @@
 				"resourceType": "Device",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Device andre.davis                    </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Device andre.davis </div>"
 				},
 				"identifier": [
 					{
