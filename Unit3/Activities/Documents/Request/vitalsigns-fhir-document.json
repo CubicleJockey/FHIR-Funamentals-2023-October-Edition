@@ -1,0 +1,69 @@
+{
+    "resourceType": "Bundle",
+    "type": "document",
+    "entry": [
+      {
+        "fullUrl": "urn:uuid:0939c362-ef1e-4312-be55-4047d95a6668",
+        "resource": {
+          "resourceType": "Composition",
+          "id": "0939c362-ef1e-4312-be55-4047d95a6668",
+          "status": "final",
+          "type": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "34133-9",
+                "display": "Summary report"
+              }
+            ]
+          },
+          "subject": {
+            "reference": "Patient/4019"
+          },
+          "section": [
+            {
+              "entry": [
+                {
+                  "reference": "Observation/4921"
+                },
+                {
+                  "reference": "Observation/4922"
+                },
+                {
+                  "reference": "Observation/4923"
+                },
+                {
+                  "reference": "Observation/4924"
+                },
+                {
+                  "reference": "Observation/4929"
+                },
+                {
+                  "reference": "Observation/4930"
+                },
+                {
+                  "reference": "Observation/4931"
+                },
+                {
+                  "reference": "Observation/4932"
+                },
+                {
+                  "reference": "Observation/4937"
+                },
+                {
+                  "reference": "Observation/4938"
+                },
+                {
+                  "reference": "Observation/4939"
+                },
+                {
+                  "reference": "Observation/4940"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+  

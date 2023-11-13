@@ -5,7 +5,7 @@
 		"description": "1. **http://fhirserver.hl7fundamentals.org/fhir**",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "921117",
-		"_collection_link": "https://martian-resonance-195915.postman.co/workspace/Eleven-Labs~96c03296-fe72-4bd8-8b2b-4064ed3152f4/collection/921117-a32f0382-0c04-4412-b367-22274eb37ed8?action=share&source=collection_link&creator=921117"
+		"_collection_link": "https://dredevelopment.postman.co/workspace/Eleven-Labs~96c03296-fe72-4bd8-8b2b-4064ed3152f4/collection/921117-a32f0382-0c04-4412-b367-22274eb37ed8?action=share&source=collection_link&creator=921117"
 	},
 	"item": [
 		{
@@ -53,13 +53,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{BaseUrl}}/Patient/X12984/",
+									"raw": "{{BaseUrl}}/Patient/3993/",
 									"host": [
 										"{{BaseUrl}}"
 									],
 									"path": [
 										"Patient",
-										"X12984",
+										"3993",
 										""
 									]
 								}
@@ -421,6 +421,189 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Transactions & Documents",
+			"item": [
+				{
+					"name": "Measurements - Transaction 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"resourceType\": \"Bundle\",\r\n\t\"type\": \"transaction\",\r\n\t\"entry\": [\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Organization\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UWEARME - A DIVISION OF HEALTH GIZMOS CORP </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://fhirfun2021.org/ids\",\r\n\t\t\t\t\t\t\"value\": \"UWEARME\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"name\": \"UWEARME\",\r\n\t\t\t\t\"address\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"line\": [\r\n\t\t\t\t\t\t\t\"2000 WEARABLE DRIVE\"\r\n\t\t\t\t\t\t],\r\n\t\t\t\t\t\t\"city\": \"ANN ARBOR\",\r\n\t\t\t\t\t\t\"state\": \"MI\",\r\n\t\t\t\t\t\t\"country\": \"US\"\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"PUT\",\r\n\t\t\t\t\"url\": \"Organization?identifier=http://fhirfun2021.org/ids|UWEARME\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Patient\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> Andre Davis Id # andre.davis </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://mypatientidentifier.com/ids\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"name\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"family\": \"Davis\",\r\n\t\t\t\t\t\t\"given\": [\r\n\t\t\t\t\t\t\t\"Andre\"\r\n\t\t\t\t\t\t]\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"address\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"line\": [\r\n\t\t\t\t\t\t\t\"3300 Washtenaw\"\r\n\t\t\t\t\t\t],\r\n\t\t\t\t\t\t\"city\": \"Ann Harbor\",\r\n\t\t\t\t\t\t\"district\": \"Washtenaw\",\r\n\t\t\t\t\t\t\"state\": \"MI\",\r\n\t\t\t\t\t\t\"postalCode\": \"48104\",\r\n\t\t\t\t\t\t\"country\": \"US\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"managingOrganization\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"PUT\",\r\n\t\t\t\t\"url\": \"Patient?identifier=http://mypatientidentifier.com/ids|andre.davis\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Device\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UW Device andre.davis </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://uwearme.com/dev\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"expirationDate\": \"2020-10-10\",\r\n\t\t\t\t\"lotNumber\": \"22222\",\r\n\t\t\t\t\"modelNumber\": \"u888800-1\",\r\n\t\t\t\t\"type\": {\r\n\t\t\t\t\t\"coding\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"system\": \"http://snomed.info/sct\",\r\n\t\t\t\t\t\t\t\"code\": \"33894003\",\r\n\t\t\t\t\t\t\t\"display\": \"Experimental Device\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t\"patient\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\"\r\n\t\t\t\t},\r\n\t\t\t\t\"owner\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"PUT\",\r\n\t\t\t\t\"url\": \"Device?identifier=http://uwearme.com/dev|andre.davis\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:9b3055be-bb9f-4fce-b5da-599286eb2841\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Observation\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UW Measure for Pat # andre.davis Respiratory Rate:16/min on 2023-11-09T11:00:00Z </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://uwearme.com/measures\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis-2023-11-09T11:00:00Z-9279-1\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"status\": \"final\",\r\n\t\t\t\t\"code\": {\r\n\t\t\t\t\t\"coding\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"system\": \"http://loinc.org\",\r\n\t\t\t\t\t\t\t\"code\": \"9279-1\",\r\n\t\t\t\t\t\t\t\"display\": \"Respiratory Rate\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t\"subject\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\"\r\n\t\t\t\t},\r\n\t\t\t\t\"effectiveDateTime\": \"2023-11-09T11:00:00Z\",\r\n\t\t\t\t\"valueQuantity\": {\r\n\t\t\t\t\t\"value\": 16,\r\n\t\t\t\t\t\"unit\": \"/min\"\r\n\t\t\t\t},\r\n\t\t\t\t\"device\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"POST\",\r\n\t\t\t\t\"url\": \"Observation\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:bf551c01-8aa5-4ace-99d4-ae03a5bc89e7\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Observation\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UW Measure for Pat # andre.davis Systolic Blood Pressure: 154mmHg on 2023-11-09T11:00:00Z </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://uwearme.com/measures\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis-2023-11-09T11:00:00Z-8480-6\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"status\": \"final\",\r\n\t\t\t\t\"code\": {\r\n\t\t\t\t\t\"coding\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"system\": \"http://loinc.org\",\r\n\t\t\t\t\t\t\t\"code\": \"8480-6\",\r\n\t\t\t\t\t\t\t\"display\": \"Systolic Blood Pressure\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t\"subject\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\"\r\n\t\t\t\t},\r\n\t\t\t\t\"effectiveDateTime\": \"2023-11-09T11:00:00Z\",\r\n\t\t\t\t\"valueQuantity\": {\r\n                    \"value\": 154,\r\n\t\t\t\t\t\"unit\": \"mmHg\"\r\n\t\t\t\t},\r\n\t\t\t\t\"device\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"POST\",\r\n\t\t\t\t\"url\": \"Observation\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:54e8f280-8f5c-4d63-a174-29a091ecb06a\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Observation\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UW Measure for Pat # andre.davis Diastolic Blood Pressure:63mmHg on 2023-11-09T11:00:00Z </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://uwearme.com/measures\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis-2023-11-09T11:00:00Z-8462-4\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"status\": \"final\",\r\n\t\t\t\t\"code\": {\r\n\t\t\t\t\t\"coding\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"system\": \"http://loinc.org\",\r\n\t\t\t\t\t\t\t\"code\": \"8462-4\",\r\n\t\t\t\t\t\t\t\"display\": \"Diastolic Blood Pressure\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t\"subject\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\"\r\n\t\t\t\t},\r\n\t\t\t\t\"effectiveDateTime\": \"2023-11-09T11:00:00Z\",\r\n\t\t\t\t\"valueQuantity\": {\r\n\t\t\t\t\t\"value\": 63,\r\n\t\t\t\t\t\"unit\": \"mmHg\"\r\n\t\t\t\t},\r\n\t\t\t\t\"device\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"POST\",\r\n\t\t\t\t\"url\": \"Observation\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:55c0f3ad-4a2e-4516-8e2c-3db15ed62941\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Observation\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UW Measure for Pat #andre.davis Heart Rate:79/min on 2023-11-09T11:00:00Z </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://uwearme.com/measures\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis-2023-11-09T11:00:00Z-8867-4\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"status\": \"final\",\r\n\t\t\t\t\"code\": {\r\n\t\t\t\t\t\"coding\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"system\": \"http://loinc.org\",\r\n\t\t\t\t\t\t\t\"code\": \"8867-4\",\r\n\t\t\t\t\t\t\t\"display\": \"Heart Rate\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t\"subject\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\"\r\n\t\t\t\t},\r\n\t\t\t\t\"effectiveDateTime\": \"2023-11-09T11:00:00Z\",\r\n\t\t\t\t\"valueQuantity\": {\r\n\t\t\t\t\t\"value\": 79,\r\n\t\t\t\t\t\"unit\": \"/min\"\r\n\t\t\t\t},\r\n\t\t\t\t\"device\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"POST\",\r\n\t\t\t\t\"url\": \"Observation\"\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}"
+						},
+						"url": {
+							"raw": "{{BaseUrl}}",
+							"host": [
+								"{{BaseUrl}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Measurements - Transaction 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"resourceType\": \"Bundle\",\r\n\t\"type\": \"transaction\",\r\n\t\"entry\": [\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Organization\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UWEARME - A DIVISION OF HEALTH GIZMOS CORP </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://fhirfun2021.org/ids\",\r\n\t\t\t\t\t\t\"value\": \"UWEARME\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"name\": \"UWEARME\",\r\n\t\t\t\t\"address\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"line\": [\r\n\t\t\t\t\t\t\t\"2000 WEARABLE DRIVE\"\r\n\t\t\t\t\t\t],\r\n\t\t\t\t\t\t\"city\": \"ANN ARBOR\",\r\n\t\t\t\t\t\t\"state\": \"MI\",\r\n\t\t\t\t\t\t\"country\": \"US\"\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"PUT\",\r\n\t\t\t\t\"url\": \"Organization?identifier=http://fhirfun2021.org/ids|UWEARME\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Patient\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> Andre Davis Id # andre.davis </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://mypatientidentifier.com/ids\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"name\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"family\": \"Davis\",\r\n\t\t\t\t\t\t\"given\": [\r\n\t\t\t\t\t\t\t\"Andre\"\r\n\t\t\t\t\t\t]\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"address\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"line\": [\r\n\t\t\t\t\t\t\t\"3300 Washtenaw\"\r\n\t\t\t\t\t\t],\r\n\t\t\t\t\t\t\"city\": \"Ann Harbor\",\r\n\t\t\t\t\t\t\"district\": \"Washtenaw\",\r\n\t\t\t\t\t\t\"state\": \"MI\",\r\n\t\t\t\t\t\t\"postalCode\": \"48104\",\r\n\t\t\t\t\t\t\"country\": \"US\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"managingOrganization\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"PUT\",\r\n\t\t\t\t\"url\": \"Patient?identifier=http://mypatientidentifier.com/ids|andre.davis\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Device\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UW Device andre.davis </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://uwearme.com/dev\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"expirationDate\": \"2020-10-10\",\r\n\t\t\t\t\"lotNumber\": \"22222\",\r\n\t\t\t\t\"modelNumber\": \"u888800-1\",\r\n\t\t\t\t\"type\": {\r\n\t\t\t\t\t\"coding\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"system\": \"http://snomed.info/sct\",\r\n\t\t\t\t\t\t\t\"code\": \"33894003\",\r\n\t\t\t\t\t\t\t\"display\": \"Experimental Device\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t\"patient\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\"\r\n\t\t\t\t},\r\n\t\t\t\t\"owner\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"PUT\",\r\n\t\t\t\t\"url\": \"Device?identifier=http://uwearme.com/dev|andre.davis\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:9b3055be-bb9f-4fce-b5da-599286eb2841\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Observation\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UW Measure for Pat # andre.davis Respiratory Rate:14/min on 2023-11-09T10:45:00Z </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://uwearme.com/measures\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis-2023-11-09T10:45:00Z-9279-1\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"status\": \"final\",\r\n\t\t\t\t\"code\": {\r\n\t\t\t\t\t\"coding\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"system\": \"http://loinc.org\",\r\n\t\t\t\t\t\t\t\"code\": \"9279-1\",\r\n\t\t\t\t\t\t\t\"display\": \"Respiratory Rate\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t\"subject\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\"\r\n\t\t\t\t},\r\n\t\t\t\t\"effectiveDateTime\": \"2023-11-09T10:45:00Z\",\r\n\t\t\t\t\"valueQuantity\": {\r\n\t\t\t\t\t\"value\": 14,\r\n\t\t\t\t\t\"unit\": \"/min\"\r\n\t\t\t\t},\r\n\t\t\t\t\"device\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"POST\",\r\n\t\t\t\t\"url\": \"Observation\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:bf551c01-8aa5-4ace-99d4-ae03a5bc89e7\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Observation\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UW Measure for Pat # andre.davis Systolic Blood Pressure: 137mmHg on 2023-11-09T10:45:00Z </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://uwearme.com/measures\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis-2023-11-09T10:45:00Z-8480-6\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"status\": \"final\",\r\n\t\t\t\t\"code\": {\r\n\t\t\t\t\t\"coding\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"system\": \"http://loinc.org\",\r\n\t\t\t\t\t\t\t\"code\": \"8480-6\",\r\n\t\t\t\t\t\t\t\"display\": \"Systolic Blood Pressure\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t\"subject\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\"\r\n\t\t\t\t},\r\n\t\t\t\t\"effectiveDateTime\": \"2023-11-09T10:45:00Z\",\r\n\t\t\t\t\"valueQuantity\": {\r\n                    \"value\": 137,\r\n\t\t\t\t\t\"unit\": \"mmHg\"\r\n\t\t\t\t},\r\n\t\t\t\t\"device\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"POST\",\r\n\t\t\t\t\"url\": \"Observation\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:54e8f280-8f5c-4d63-a174-29a091ecb06a\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Observation\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UW Measure for Pat # andre.davis Diastolic Blood Pressure:119mmHg on 2023-11-09T10:45:00Z </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://uwearme.com/measures\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis-2023-11-09T10:45:00Z-8462-4\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"status\": \"final\",\r\n\t\t\t\t\"code\": {\r\n\t\t\t\t\t\"coding\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"system\": \"http://loinc.org\",\r\n\t\t\t\t\t\t\t\"code\": \"8462-4\",\r\n\t\t\t\t\t\t\t\"display\": \"Diastolic Blood Pressure\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t\"subject\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\"\r\n\t\t\t\t},\r\n\t\t\t\t\"effectiveDateTime\": \"2023-11-09T10:45:00Z\",\r\n\t\t\t\t\"valueQuantity\": {\r\n\t\t\t\t\t\"value\": 119,\r\n\t\t\t\t\t\"unit\": \"mmHg\"\r\n\t\t\t\t},\r\n\t\t\t\t\"device\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"POST\",\r\n\t\t\t\t\"url\": \"Observation\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:55c0f3ad-4a2e-4516-8e2c-3db15ed62941\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Observation\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UW Measure for Pat #andre.davis Heart Rate:69/min on 2023-11-09T10:45:00Z </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://uwearme.com/measures\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis-2023-11-09T10:45:00Z-8867-4\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"status\": \"final\",\r\n\t\t\t\t\"code\": {\r\n\t\t\t\t\t\"coding\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"system\": \"http://loinc.org\",\r\n\t\t\t\t\t\t\t\"code\": \"8867-4\",\r\n\t\t\t\t\t\t\t\"display\": \"Heart Rate\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t\"subject\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\"\r\n\t\t\t\t},\r\n\t\t\t\t\"effectiveDateTime\": \"2023-11-09T10:45:00Z\",\r\n\t\t\t\t\"valueQuantity\": {\r\n\t\t\t\t\t\"value\": 69,\r\n\t\t\t\t\t\"unit\": \"/min\"\r\n\t\t\t\t},\r\n\t\t\t\t\"device\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"POST\",\r\n\t\t\t\t\"url\": \"Observation\"\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}"
+						},
+						"url": {
+							"raw": "{{BaseUrl}}",
+							"host": [
+								"{{BaseUrl}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Measurements - Transaction 3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"resourceType\": \"Bundle\",\r\n\t\"type\": \"transaction\",\r\n\t\"entry\": [\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Organization\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UWEARME - A DIVISION OF HEALTH GIZMOS CORP </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://fhirfun2021.org/ids\",\r\n\t\t\t\t\t\t\"value\": \"UWEARME\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"name\": \"UWEARME\",\r\n\t\t\t\t\"address\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"line\": [\r\n\t\t\t\t\t\t\t\"2000 WEARABLE DRIVE\"\r\n\t\t\t\t\t\t],\r\n\t\t\t\t\t\t\"city\": \"ANN ARBOR\",\r\n\t\t\t\t\t\t\"state\": \"MI\",\r\n\t\t\t\t\t\t\"country\": \"US\"\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"PUT\",\r\n\t\t\t\t\"url\": \"Organization?identifier=http://fhirfun2021.org/ids|UWEARME\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Patient\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> Andre Davis Id # andre.davis </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://mypatientidentifier.com/ids\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"name\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"family\": \"Davis\",\r\n\t\t\t\t\t\t\"given\": [\r\n\t\t\t\t\t\t\t\"Andre\"\r\n\t\t\t\t\t\t]\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"address\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"line\": [\r\n\t\t\t\t\t\t\t\"3300 Washtenaw\"\r\n\t\t\t\t\t\t],\r\n\t\t\t\t\t\t\"city\": \"Ann Harbor\",\r\n\t\t\t\t\t\t\"district\": \"Washtenaw\",\r\n\t\t\t\t\t\t\"state\": \"MI\",\r\n\t\t\t\t\t\t\"postalCode\": \"48104\",\r\n\t\t\t\t\t\t\"country\": \"US\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"managingOrganization\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"PUT\",\r\n\t\t\t\t\"url\": \"Patient?identifier=http://mypatientidentifier.com/ids|andre.davis\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Device\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UW Device andre.davis </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://uwearme.com/dev\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"expirationDate\": \"2020-10-10\",\r\n\t\t\t\t\"lotNumber\": \"22222\",\r\n\t\t\t\t\"modelNumber\": \"u888800-1\",\r\n\t\t\t\t\"type\": {\r\n\t\t\t\t\t\"coding\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"system\": \"http://snomed.info/sct\",\r\n\t\t\t\t\t\t\t\"code\": \"33894003\",\r\n\t\t\t\t\t\t\t\"display\": \"Experimental Device\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t\"patient\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\"\r\n\t\t\t\t},\r\n\t\t\t\t\"owner\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"PUT\",\r\n\t\t\t\t\"url\": \"Device?identifier=http://uwearme.com/dev|andre.davis\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:9b3055be-bb9f-4fce-b5da-599286eb2841\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Observation\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UW Measure for Pat # andre.davis Respiratory Rate:16/min on 2023-11-09T11:00:00Z </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://uwearme.com/measures\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis-2023-11-09T11:00:00Z-9279-1\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"status\": \"final\",\r\n\t\t\t\t\"code\": {\r\n\t\t\t\t\t\"coding\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"system\": \"http://loinc.org\",\r\n\t\t\t\t\t\t\t\"code\": \"9279-1\",\r\n\t\t\t\t\t\t\t\"display\": \"Respiratory Rate\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t\"subject\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\"\r\n\t\t\t\t},\r\n\t\t\t\t\"effectiveDateTime\": \"2023-11-09T11:00:00Z\",\r\n\t\t\t\t\"valueQuantity\": {\r\n\t\t\t\t\t\"value\": 16,\r\n\t\t\t\t\t\"unit\": \"/min\"\r\n\t\t\t\t},\r\n\t\t\t\t\"device\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"POST\",\r\n\t\t\t\t\"url\": \"Observation\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:bf551c01-8aa5-4ace-99d4-ae03a5bc89e7\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Observation\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UW Measure for Pat # andre.davis Systolic Blood Pressure: 154mmHg on 2023-11-09T11:00:00Z </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://uwearme.com/measures\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis-2023-11-09T11:00:00Z-8480-6\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"status\": \"final\",\r\n\t\t\t\t\"code\": {\r\n\t\t\t\t\t\"coding\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"system\": \"http://loinc.org\",\r\n\t\t\t\t\t\t\t\"code\": \"8480-6\",\r\n\t\t\t\t\t\t\t\"display\": \"Systolic Blood Pressure\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t\"subject\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\"\r\n\t\t\t\t},\r\n\t\t\t\t\"effectiveDateTime\": \"2023-11-09T11:00:00Z\",\r\n\t\t\t\t\"valueQuantity\": {\r\n                    \"value\": 154,\r\n\t\t\t\t\t\"unit\": \"mmHg\"\r\n\t\t\t\t},\r\n\t\t\t\t\"device\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"POST\",\r\n\t\t\t\t\"url\": \"Observation\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:54e8f280-8f5c-4d63-a174-29a091ecb06a\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Observation\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UW Measure for Pat # andre.davis Diastolic Blood Pressure:63mmHg on 2023-11-09T11:00:00Z </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://uwearme.com/measures\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis-2023-11-09T11:00:00Z-8462-4\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"status\": \"final\",\r\n\t\t\t\t\"code\": {\r\n\t\t\t\t\t\"coding\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"system\": \"http://loinc.org\",\r\n\t\t\t\t\t\t\t\"code\": \"8462-4\",\r\n\t\t\t\t\t\t\t\"display\": \"Diastolic Blood Pressure\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t\"subject\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\"\r\n\t\t\t\t},\r\n\t\t\t\t\"effectiveDateTime\": \"2023-11-09T11:00:00Z\",\r\n\t\t\t\t\"valueQuantity\": {\r\n\t\t\t\t\t\"value\": 63,\r\n\t\t\t\t\t\"unit\": \"mmHg\"\r\n\t\t\t\t},\r\n\t\t\t\t\"device\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"POST\",\r\n\t\t\t\t\"url\": \"Observation\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"fullUrl\": \"urn:uuid:55c0f3ad-4a2e-4516-8e2c-3db15ed62941\",\r\n\t\t\t\"resource\": {\r\n\t\t\t\t\"resourceType\": \"Observation\",\r\n\t\t\t\t\"text\": {\r\n\t\t\t\t\t\"status\": \"generated\",\r\n\t\t\t\t\t\"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"> UW Measure for Pat #andre.davis Heart Rate:79/min on 2023-11-09T11:00:00Z </div>\"\r\n\t\t\t\t},\r\n\t\t\t\t\"identifier\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\": \"http://uwearme.com/measures\",\r\n\t\t\t\t\t\t\"value\": \"andre.davis-2023-11-09T11:00:00Z-8867-4\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"status\": \"final\",\r\n\t\t\t\t\"code\": {\r\n\t\t\t\t\t\"coding\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"system\": \"http://loinc.org\",\r\n\t\t\t\t\t\t\t\"code\": \"8867-4\",\r\n\t\t\t\t\t\t\t\"display\": \"Heart Rate\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t\"subject\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9\"\r\n\t\t\t\t},\r\n\t\t\t\t\"effectiveDateTime\": \"2023-11-09T11:00:00Z\",\r\n\t\t\t\t\"valueQuantity\": {\r\n\t\t\t\t\t\"value\": 79,\r\n\t\t\t\t\t\"unit\": \"/min\"\r\n\t\t\t\t},\r\n\t\t\t\t\"device\": {\r\n\t\t\t\t\t\"reference\": \"urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"request\": {\r\n\t\t\t\t\"method\": \"POST\",\r\n\t\t\t\t\"url\": \"Observation\"\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}"
+						},
+						"url": {
+							"raw": "{{BaseUrl}}",
+							"host": [
+								"{{BaseUrl}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Observations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseUrl}}/Observation?subject:Patient.identifier=http://mypatientidentifier.com/ids|andre.davis",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"Observation"
+							],
+							"query": [
+								{
+									"key": "subject:Patient.identifier",
+									"value": "http://mypatientidentifier.com/ids|andre.davis"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Everything for Patient",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseUrl}}/Patient/375b7b36-bcca-40e0-ab70-6fbea3e770e3/$everything",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"Patient",
+								"375b7b36-bcca-40e0-ab70-6fbea3e770e3",
+								"$everything"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Transaction Patient",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseUrl}}/Patient?identifier=http://mypatientidentifier.com/ids|andre.davis",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": "http://mypatientidentifier.com/ids|andre.davis"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Metadata",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseUrl}}/metadata",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"metadata"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
