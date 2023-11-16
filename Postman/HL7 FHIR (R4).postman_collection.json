@@ -342,12 +342,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{BaseUrl}}/fhir/Patient?family=Davis&_sort=-_id",
+									"raw": "{{BaseUrl}}/Patient?family=Davis&_sort=-_id",
 									"host": [
 										"{{BaseUrl}}"
 									],
 									"path": [
-										"fhir",
 										"Patient"
 									],
 									"query": [
