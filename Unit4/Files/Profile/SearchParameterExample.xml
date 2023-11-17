@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource>
+    <SearchParameter xmlns="http://hl7.org/fhir">
+        <id value="AllergyIntolerance-substance"/>
+        <meta>
+            <versionId value="1"/>
+            <lastUpdated value="2016-01-06T11:37:39Z"/>
+        </meta>
+        <extension url="http://hl7.org/fhir/StructureDefinition/searchparameter-expression">
+            <valueString
+                value="AllergyIntolerance.substance | AllergyIntolerance.reaction.substance"
+            />
+        </extension>
+        <url value="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-substance"/>
+        <name value="substance"/>
+        <publisher value="Health Level Seven International (Patient Care)"/>
+        <contact>
+            <telecom>
+                <system value="other"/>
+                <value value="http://hl7.org/fhir"/>
+            </telecom>
+        </contact>
+        <contact>
+            <telecom>
+                <system value="other"/>
+                <value value="http://www.hl7.org/Special/committees/patientcare/index.cfm"/>
+            </telecom>
+        </contact>
+        <date value="2015-12-22T12:09:07+11:00"/>
+        <code value="substance"/>
+        <base value="AllergyIntolerance"/>
+        <type value="token"/>
+        <description value="Substance, (or class) considered to be responsible for risk"/>
+        <xpath
+            value="f:AllergyIntolerance/f:substance | f:AllergyIntolerance/f:reaction/f:substance"/>
+        <xpathUsage value="normal"/>
+    </SearchParameter>
+    

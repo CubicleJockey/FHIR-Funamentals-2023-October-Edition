@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OperationDefinition xmlns="http://hl7.org/fhir"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://hl7.org/fhir ../../FACTURACION_Y_DEBITOS/fhir-all-xsd/operationdefinition.xsd">
+  <name></name>
+  <status></status>
+  <kind></kind>
+  <description></description>
+  <requirements></requirements>
+  <idempotent value="true"></idempotent>
+  <code value="1">
+      
+  </code>
+  <base></base>
+    <system></system>
+    <instance></instance>
+    <parameter>
+        <name></name>
+        <use></use>
+        <min></min>
+        <max></max>
+    </parameter>
+    <parameter>
+        <name></name>
+        <use></use>
+        <min></min>
+        <max></max>
+    </parameter>
+</OperationDefinition>
