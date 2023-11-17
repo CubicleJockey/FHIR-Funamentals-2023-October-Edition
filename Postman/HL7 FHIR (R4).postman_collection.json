@@ -582,6 +582,39 @@
 			]
 		},
 		{
+			"name": "Profiles",
+			"item": [
+				{
+					"name": "Patient Validation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"resourceType\": \"Patient\",\r\n    \"id\": \"PatientAlbertGruollian\",\r\n    \"meta\": {\r\n        \"profile\": [\r\n            \"http://minhealth.gov.bk/core/StructureDefinition/BerzerkistanPatient\"\r\n        ]\r\n    },\r\n    \"extension\": [\r\n        {\r\n            \"url\": \"http://minhealth.gov.bk/core/StructureDefinition/PPHTaxSituation\",\r\n            \"valueCode\": \"X\"\r\n        }\r\n    ],\r\n    \"identifier\": [\r\n        {\r\n            \"use\": \"official\",\r\n            \"system\": \"http://www.berzerkistan.gov/bni\",\r\n            \"value\": \"9000031\"\r\n        },\r\n        {\r\n            \"use\": \"usual\",\r\n            \"system\": \"http://www.mypatients.gov/number\",\r\n            \"value\": \"23327758999\"\r\n        }\r\n    ],\r\n    \"name\": [\r\n        {\r\n            \"family\": \"Gruollian\",\r\n            \"given\": [\r\n                \"Albert\"\r\n            ]\r\n        }\r\n    ],\r\n    \"gender\": \"male\",\r\n    \"telecom\": [\r\n        {\r\n            \"system\": \"phone\",\r\n            \"value\": \"+541155555555\"\r\n        }\r\n    ],\r\n    \"birthDate\": \"1922-06-14\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/Patient/$validate",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"Patient",
+								"$validate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Metadata",
 			"request": {
 				"method": "GET",

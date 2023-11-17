@@ -1,0 +1,63 @@
+{
+    "resourceType": "OperationOutcome",
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Patient, Line 1, Col 2]</td><td><pre>dom-6: 'A resource should have narrative for robust management' Rule 'A resource should have narrative for robust management' Failed</pre></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td style=\"font-weight: bold;\">ERROR</td>\n\t\t\t\t<td>[Patient, Line 1, Col 2]</td>\n\t\t\t\t<td><pre>Patient.text: minimum required = 1, but only found 0 (from http://minhealth.gov.bk/core/StructureDefinition/BerzerkistanPatient)</pre></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td style=\"font-weight: bold;\">ERROR</td>\n\t\t\t\t<td>[Patient, Line 1, Col 2]</td>\n\t\t\t\t<td><pre>Patient.gender: minimum required = 1, but only found 0 (from http://minhealth.gov.bk/core/StructureDefinition/BerzerkistanPatient)</pre></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td style=\"font-weight: bold;\">ERROR</td>\n\t\t\t\t<td>[Patient.extension[0].value.ofType(code), Line 13, Col 10]</td>\n\t\t\t\t<td><pre>The value provided ('X') is not in the value set http://minhealth.gov.bk/core/ValueSet/PPHTaxSituationVS (http://minhealth.gov.bk/core/ValueSet/PPHTaxSituationVS), and a code is required from this value set) (error message = Unknown code 'X')</pre></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td style=\"font-weight: bold;\">ERROR</td>\n\t\t\t\t<td>[Patient.identifier[1].system, Line 23, Col 58]</td>\n\t\t\t\t<td><pre>Value is 'http://www.mypatients.gov/number' but must be 'http://www.berzerkistan.gov/nhib'</pre></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td style=\"font-weight: bold;\">ERROR</td>\n\t\t\t\t<td>[Patient.telecom[0].value, Line 39, Col 10]</td>\n\t\t\t\t<td><pre>phone-number-country-code: 'Patient.telecom.value must begin with +5411' Rule 'Patient.telecom.value must begin with +5411' Failed</pre></td>\n\t\t\t</tr>\n\t\t</table>\n\t</div>"
+    },
+    "issue": [
+        {
+            "severity": "warning",
+            "code": "processing",
+            "diagnostics": "dom-6: 'A resource should have narrative for robust management' Rule 'A resource should have narrative for robust management' Failed",
+            "location": [
+                "Patient",
+                "Line 1, Col 2"
+            ]
+        },
+        {
+            "severity": "error",
+            "code": "processing",
+            "diagnostics": "Patient.text: minimum required = 1, but only found 0 (from http://minhealth.gov.bk/core/StructureDefinition/BerzerkistanPatient)",
+            "location": [
+                "Patient",
+                "Line 1, Col 2"
+            ]
+        },
+        {
+            "severity": "error",
+            "code": "processing",
+            "diagnostics": "Patient.gender: minimum required = 1, but only found 0 (from http://minhealth.gov.bk/core/StructureDefinition/BerzerkistanPatient)",
+            "location": [
+                "Patient",
+                "Line 1, Col 2"
+            ]
+        },
+        {
+            "severity": "error",
+            "code": "processing",
+            "diagnostics": "The value provided ('X') is not in the value set http://minhealth.gov.bk/core/ValueSet/PPHTaxSituationVS (http://minhealth.gov.bk/core/ValueSet/PPHTaxSituationVS), and a code is required from this value set) (error message = Unknown code 'X')",
+            "location": [
+                "Patient.extension[0].value.ofType(code)",
+                "Line 13, Col 10"
+            ]
+        },
+        {
+            "severity": "error",
+            "code": "processing",
+            "diagnostics": "Value is 'http://www.mypatients.gov/number' but must be 'http://www.berzerkistan.gov/nhib'",
+            "location": [
+                "Patient.identifier[1].system",
+                "Line 23, Col 58"
+            ]
+        },
+        {
+            "severity": "error",
+            "code": "processing",
+            "diagnostics": "phone-number-country-code: 'Patient.telecom.value must begin with +5411' Rule 'Patient.telecom.value must begin with +5411' Failed",
+            "location": [
+                "Patient.telecom[0].value",
+                "Line 39, Col 10"
+            ]
+        }
+    ]
+}
