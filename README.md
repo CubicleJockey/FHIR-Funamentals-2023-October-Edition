@@ -21,9 +21,6 @@
 > This Unit discusses some advanced topics regarding FHIR profiling: how to define extensions and restrictions on FHIR resources, and how to document these restrictions using FHIR resources.
 
 
+### Next Course
 
-
-
-# Documentation
-
- * [Visual Studio Code - Variables](https://code.visualstudio.com/docs/editor/variables-reference)
+[FHIR Intermediate](https://www.hl7.org/training/fhir-intermediate.cfm?ref=nav)
