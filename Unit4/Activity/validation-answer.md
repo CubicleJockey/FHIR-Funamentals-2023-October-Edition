@@ -1,10 +1,12 @@
 # Profile Validation
+```text
+Method: Post
+Header:
+* Content-Type application/fhir+json
+URL: http://fhirserver.hl7fundamentals.org/fhir/Patient/$validate
+Body:
+```
 
->**Method:** Post
->**Header:**
->* **Content-Type** application/fhir+json
->**URL:** http://fhirserver.hl7fundamentals.org/fhir/Patient/$validate
->**Body**:
 ```JSON
 {
     "resourceType": "Patient",

@@ -1,12 +1,14 @@
 #CRUD
 
 #### Create Patient
->**Method:** POST
->**Header:**
->* **Content-Type:** application/fhir+json
->
->**URL:** http://fhirserver.hl7fundamentals.org/fhir/Patient
->Body:
+```text
+Method: POST
+Header:
+    * Content-Type:** application/fhir+json
+URL: http://fhirserver.hl7fundamentals.org/fhir/Patient
+Body:
+```
+
 ```JSON
 {
   "resourceType": "Patient",
@@ -62,19 +64,25 @@
 ```
 
 #### Get Patient
->**Method:** GET
->**Header:**
->* **Content-Type:** application/fhir+json
->
->**URL:** http://fhirserver.hl7fundamentals.org/fhir/Patient/3993/
+```text
+Method: GET
+Header:
+    * Content-Type: application/fhir+json
+
+URL: http://fhirserver.hl7fundamentals.org/fhir/Patient/3993/
+```
+
 
 #### Update Patient
->**Method:** PUT
->**Header:**
->* **Content-Type:** application/fhir+json
->
->**URL:** http://fhirserver.hl7fundamentals.org/fhir/Patient/
->Body:
+```text
+Method:** PUT
+Header:**
+   * Content-Type:** application/fhir+json
+
+URL: http://fhirserver.hl7fundamentals.org/fhir/Patient/
+Body:
+```
+
 ```JSON
 {
     "resourceType": "Patient",
@@ -141,15 +149,21 @@
 
 #### Delete Patient
 
->**Method:** DELETE
->**Header:**
->* **Content-Type:** application/fhir+json
->
->**URL:** http://fhirserver.hl7fundamentals.org/fhir/Patient/3993
+```text
+Method:** DELETE
+Header:**
+   * Content-Type:** application/fhir+json
+
+URL: http://fhirserver.hl7fundamentals.org/fhir/Patient/3993
+```
+
+
 
 #### Get Patient History By Version
 
->**Method:** GET
->**Header:**
->* **Content-Type:** application/json
->**URL:** http://fhirserver.hl7fundamentals.org/fhir/Patient/3993/_history/2
+```text
+Method:** GET
+Header:**
+    * Content-Type:** application/json
+URL: http://fhirserver.hl7fundamentals.org/fhir/Patient/3993/_history/2
+```
