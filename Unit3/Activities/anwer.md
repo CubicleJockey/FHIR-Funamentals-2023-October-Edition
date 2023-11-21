@@ -864,7 +864,7 @@
 }
 ```
 
-#### Get Observations
+# Observation Query
 > Method: GET
 > Header:
 > * Content-Type: application/json
