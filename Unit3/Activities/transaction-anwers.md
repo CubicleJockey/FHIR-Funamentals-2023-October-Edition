@@ -1,9 +1,12 @@
 # Transactions 
 
->All Transactions go to the base url: http://fhirserver.hl7fundamentals.org/fhir
->* Method: POST
->* Header:
->   * Content-Type: application/fhir+json
+```text
+All Transactions go to the base url: http://fhirserver.hl7fundamentals.org/fhir
+Method: POST
+Header:
+   * Content-Type: application/fhir+json
+```
+
 
 #### Transaction 1
 >Post Body
