@@ -75,8 +75,8 @@ URL: http://fhirserver.hl7fundamentals.org/fhir/Patient/3993/
 
 #### Update Patient
 ```text
-Method:** PUT
-Header:**
+Method: PUT
+Header:
    * Content-Type:** application/fhir+json
 
 URL: http://fhirserver.hl7fundamentals.org/fhir/Patient/
