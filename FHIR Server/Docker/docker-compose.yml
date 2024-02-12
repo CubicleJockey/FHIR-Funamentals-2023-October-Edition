@@ -1,0 +1,30 @@
+version: '3.8'
+name: 'fhir-r4-microsoft'
+services:
+  fhir_sql:
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      SA_PASSWORD: "fhir_admin_123"
+      ACCEPT_EULA: "Y"
+    networks:
+      - fhir_network
+
+  r4_fhir_server:
+    image: mcr.microsoft.com/healthcareapis/r4-fhir-server
+    environment:
+      FhirServer__Security__Enabled: "false"
+      SqlServer__ConnectionString: "Server=tcp:fhir_sql,1433;Initial Catalog=FHIR;Persist Security Info=False;User ID=sa;Password=fhir_admin_123;MultipleActiveResultSets=False;Connection Timeout=30;TrustServerCertificate=True"
+      SqlServer__AllowDatabaseCreation: "true"
+      SqlServer__Initialize: "true"
+      SqlServer__SchemaOptions__AutomaticUpdatesEnabled: "true"
+      DataStore: "SqlServer"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - fhir_sql
+    networks:
+      - fhir_network
+
+networks:
+  fhir_network:
+    name: fhir_network
